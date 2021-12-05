@@ -1,8 +1,12 @@
 package com.spring.utils.mvc.view.error;
 
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 @Controller
 @RequestMapping("/error/throw")
@@ -13,4 +17,12 @@ public class ErrorThrowController {
 
         throw new RuntimeException();
     }
+
+    @RequestMapping("/sendError")
+    public void throwSendError(HttpServletResponse response) throws Exception {
+
+        response.sendError(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Throw Server Exception");
+    }
+
+
 }
