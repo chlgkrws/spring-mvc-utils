@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 
-//@Configuration
+@Configuration
 public class ErrorConfig implements WebServerFactoryCustomizer<ConfigurableWebServerFactory> {
 
     /*
@@ -32,7 +32,7 @@ public class ErrorConfig implements WebServerFactoryCustomizer<ConfigurableWebSe
         // 404, RuntimeException 에러 -> 서블릿에 등록
         ErrorPage error404 = new ErrorPage(HttpStatus.NOT_FOUND, "/error/404");
         ErrorPage error500 = new ErrorPage(HttpStatus.INTERNAL_SERVER_ERROR, "/error/500");
-        ErrorPage errorRTE = new ErrorPage(RuntimeException.class, "/error/runtime");
+        ErrorPage errorRTE = new ErrorPage(RuntimeException.class, "/error/500");
 
         factory.addErrorPages(error404, error500, errorRTE);
     }
