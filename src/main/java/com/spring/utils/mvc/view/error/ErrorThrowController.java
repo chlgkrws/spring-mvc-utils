@@ -6,8 +6,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
+/**
+ * 예외 던지기 용 예제 컨트롤러
+ */
 @Controller
 @RequestMapping("/error/throw")
 public class ErrorThrowController {

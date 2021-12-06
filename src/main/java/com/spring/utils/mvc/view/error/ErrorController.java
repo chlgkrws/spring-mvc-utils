@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 예외 처리 예제 컨트롤러
+ */
 @Controller
 @Slf4j
 @RequestMapping("/error")

@@ -1,10 +1,10 @@
 server:
   port: 8081
-#  error:
-#    include-message: always
-#    include-exception: true
-#    include-stacktrace: always
-#    include-binding-errors: always
+  error:
+    include-message: never
+    include-exception: false
+    include-stacktrace: never
+    include-binding-errors: never
 
 spring:
   thymeleaf:
