@@ -27,6 +27,7 @@ public class MainController {
         Form form = new Form(ipPort);
 
         modelAndView.addObject("form", form);
+        modelAndView.addObject("number", 1000);
         modelAndView.setViewName("form");
         return modelAndView;
     }
